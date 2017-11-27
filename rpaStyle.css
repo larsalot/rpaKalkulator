@@ -1,0 +1,6 @@
+#page-wrapper {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 70px 700px 1fr 20px;
+    grid-template-areas: "header header" "left-side main-content main-content right-side" "left-side main-content main-content right-side" "footer footer";
+}
