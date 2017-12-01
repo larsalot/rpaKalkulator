@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>RPA-Kalkulator</title>
+        <link rel="stylesheet" href="rpaStyle.css">
+        <script src="rpaScript.js"></script>
     </head>
 
     <body>
@@ -20,139 +22,18 @@
                     <span class="col6">Kriterie 5</span>
                     <span class="col7">Kriterie 6</span>
                 </div>
+                <div id="prosesses"></div>
+                <div class="row" id="buttons">
+                    <input class="col3-4" placeholder="Skriv inn prosessnavn" type="text" id="prosessNavn"/>
+                    <button class="col1-2" id="ny-prosess">Legg til prosess</button>
+                    <button class="col7" id="se-resultat">Se resultat</button>
 
-                <button id="ny-prosess">Legg til prosess</button>
-                <button id="se-resultat">Se resultat</button>
-
-            </div>
-            <div id="right-side"></div>
-            <footer id="footer">coopyright: Lino As</footer>
-        </div>
-
-        <style>
-            #page-wrapper {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 2fr 11fr 1fr;
-                grid-template-areas: "header " " main-content" "footer ";
-            }
-            #header {
-                border: thin black solid;
-                grid-area: header;
-                text-align: center;
-                background-color: lightgray;
-            }
-            #main-content {
-                position: relative;
-                border: thin black solid;
-                border-top: none;
-                grid-template-rows: auto;
-                grid-area: main-content;
-                background-color: darkseagreen;
-            }
-            #ny-prosess {
-                position: absolute;
-                bottom: 2px;
-                right: 90px;
-            }
-            #se-resultat {
-                position: absolute;
-                bottom: 2px;
-                right: 2px;
-            }
-            .row > input {
-                display: block;
-                margin: auto;
-                width: 70%;
-            }
-            .row {
-                border-bottom: thin grey solid;
-                background-color: beige;
-                text-align: center;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                display: grid;
-                grid-template-columns: repeat(7,1fr);
-            }
-            .row:nth-child(1) {
-                border-bottom: thin black solid;
-                color: white;
-                background-color: seagreen;
-            }
-            .col1 {
-                grid-column: 1/2;
-            }
-            .col2 {
-                grid-column: 2/3;
-            }
-            .col3 {
-                grid-column: 3/4;
-            }
-            .col4 {
-                grid-column: 4/5;
-            }
-            .col5 {
-                grid-column: 5/6;
-            }
-            .col6 {
-                grid-column: 6/7;
-            }
-            .col7 {
-                grid-column: 7/8;
-            }
-            #footer {
-                border: thin black solid;
-                border-top: none;
-                grid-area: footer;
-                text-align: right;
-                background-color: lightgray;
-            }
-
-        </style>
-
-        <script>
-            var numberOfpro;
-            var newPro
-            window.onload = function () {
-                numberOfpro = 1;
-                newPro = document.getElementById("ny-prosess");
-                newPro.addEventListener("click", newProsess);
-            }
-
-            function newProsess() {
-                var mainContent = document.getElementById("main-content");
-                var tempDiv = document.createElement('div');
-                var tempId = "prosess" + numberOfpro;
-                tempDiv.setAttribute('class', 'row');
-                tempDiv.setAttribute('id', tempId);
-                var tempProsessNavn = document.createElement('span');
-                tempProsessNavn.setAttribute('class', 'col1');
-                tempProsessNavn.textContent = "Prosess navn";
-                tempDiv.appendChild(tempProsessNavn);
-
-                for (var i = 2; i < 8; i++) {
-                    let tempClass = "col" + i;
-                    let input = document.createElement('input');
-                    input.setAttribute('class', tempClass);
-                    input.setAttribute('type', 'number');
-                    tempDiv.appendChild(input);
-                }
-                numberOfpro++;
-                mainContent.appendChild(tempDiv);
-                /*
-                <div id="prosess-1" class="row">
-                    <span class="col1">Prosess navn:</span>
-                    <input class="col2" type="number"/>
-                    <input class="col3" type="number"/>
-                    <input class="col4" type="number"/>
-                    <input class="col5" type="number"/>
-                    <input class="col6" type="number"/>
-                    <input class="col7" type="number"/>
                 </div>
-                alert("New pros");
-                */
-            }
-        </script>
+            </div>
+
+            <footer id="footer" style:"margin-right: 10px;">coopyright: Lino As
+            </footer>
+        </div>
 
     </body>
 </html>
