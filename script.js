@@ -85,10 +85,13 @@ function seOppsumering(){
     let addProsBtn = document.getElementById("addProsBtn");
     let nyttProsessNavn = document.getElementById("nyttProsessNavn");
     let changeViewBtn = document.getElementById("changeViewBtn");
+    let oppsummeringHeader= document.getElementById('oppsummeringHeader');
+    console.log(oppsummeringHeader);
     changeViewBtn.innerHTML = "Tilbake";
     addProsBtn.setAttribute("style", "display:none");
     nyttProsessNavn.setAttribute("style", "display:none");
     kriterieOversikt.setAttribute("style", "display:none");
+    oppsummeringHeader.setAttribute("style", "display:grid");
     prosContainer.setAttribute("style", "display:none");
     lagOppsumering();
 }
@@ -99,6 +102,8 @@ function seVurderingsside(){
     let addProsBtn = document.getElementById("addProsBtn");
     let nyttProsessNavn = document.getElementById("nyttProsessNavn");
     let changeViewBtn = document.getElementById("changeViewBtn");
+    let oppsummeringHeader= document.getElementById('oppsummeringHeader');
+    oppsummeringHeader.setAttribute("style", "display:none");
     changeViewBtn.innerHTML = "oppsumering";
     addProsBtn.setAttribute("style", "display:grid");
     nyttProsessNavn.setAttribute("style", "grid-column:1/4");
@@ -146,17 +151,6 @@ function initTabel(sorterteVektedeResultater,vektedeResultater,prosessNavn){
 
     resultatTabell += "</table>";
     $("#r-container").append(resultatTabell);
-/*
-    let resultatTabell =  document.createElement("Table");
-    let
-    let th =  document.createElement("th");
-    th.setAttribute("colspan", "2");
-    th.innerHTML = "Resultater";
-    let trHeader = document.createElement("tr");
-    let thNavn = document.createElement("tr");
-
-    resultatTabell.appendChild();
-    */
 }
 
 

@@ -8,6 +8,13 @@
     text-align: center;
 }
 
+h3 {
+    position: relative;
+    top: 30%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
 .innrow {
     box-sizing: border-box;
     border-top: thick solid white;
