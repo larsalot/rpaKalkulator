@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>rpa</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="pageWrapper">
+            <header>
+                <h1>RPA prosessvurdering</h1>
+            </header>
+            <div class="k-container">
+                <div class="row kriterieOversikt" id="kriterieOversikt">
+                    <span class="kriterie" style="grid-column:2/3;">Kriterie1</span>
+                    <span class="kriterie" style="grid-column:3/4;">Kriterie2</span>
+                    <span class="kriterie" style="grid-column:4/5;">Kriterie3</span>
+                    <span class="kriterie" style="grid-column:5/6;">Kriterie4</span>
+                    <span class="kriterie" style="grid-column:6/7;">Kriterie5</span>
+                    <span class="kriterie" style="grid-column:7/8;">Kriterie6</span>
+                </div>
+            </div>
+            <div id="p-wrapper">
+                <div id="p-container"></div>
+                <div id="r-container"></div>
+            </div>
+            <div class="manipulator">
+                <div class="row">
+                    <input id="nyttProsessNavn" style="grid-column:1/4;" type="text" placeholder="Skriv prosessnavn"/>
+                    <button id="addProsBtn" style="grid-column:4/5;">Legg til prosess</span>
+                    <button id="changeViewBtn" style="grid-column:7/9;margin-left:30%;">Oppsumering</span>
+                </div>
+
+            </div>
+            <footer>
+                rpa #2
+            </footer>
+
+        </div>
+
+    </body>
+</html>
